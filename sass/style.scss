@@ -1,0 +1,797 @@
+@import "responsive.scss";
+// $rose: rgb(255, 138, 157);
+// $rose: grey;
+// $violet: rgb(116, 33, 116);
+// $bgbody: rgb(36, 1, 36);    // background ny body
+// $rose: blue;
+// $rose: rgb(49, 49, 255);
+// $violet: rgb(133, 133, 247);
+// $violet: rgb(138, 46, 138);
+
+// $rose: grey;
+$rose: rgb(65, 65, 133);
+// $violet: rgb(168, 0, 168);
+$violet: rgb(101, 149, 252);
+// $bgbody: rgb(36, 1, 36);    
+$bgbody: black;    
+$bg1: black;
+$bg2: black;
+
+
+body{
+    color: white;
+    background: $bgbody;
+    font-family: sans-serif;
+    width: 99%;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+
+
+// ---------------------BAR DE NAVIGATION AVEC HUMBERGER--------------------------------------------------
+nav{
+    display: flex;
+    justify-content: space-between;
+    background: $rose;
+    // padding: 10px;
+    flex-wrap: wrap;
+    box-shadow: $violet 2px 2px 10px 1px;
+    border: .5px solid black; 
+// --------------le fixena le navigation------------------
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    // border-radius: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 70px;
+    .logo{
+        // --------------------------------------
+        // position absolute;(mivadika ny humberger rehefa asina an'io)
+        // ----------------------------------------
+        font-size: 30px;
+        font-family: sans-serif;
+        font-weight: bold;
+        background: black;
+        color: black;
+        height: 40px;
+        padding: 7px;
+        margin-top: 6.5px;
+        margin-left: 50px;
+        // text-shadow: rgb(138, 46, 138) 5px 5px 0px;
+        text-shadow: $violet 5px 5px 0px;
+        border-radius: 7px;
+        // transition: 2s;
+        // &:hover{
+        //     box-shadow: rgb(138, 46, 138) 0px 1px 10px;
+        //     transform: scale(1.1);
+        //     transition: 2s;
+        // }
+    }
+    ul{
+        float: right;
+        margin-right: 65px;
+        margin-top: -16px;
+    }
+    a{
+        position: relative;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    li{
+        line-height: 100px;
+        display: inline-block;
+        margin-left: 32px;
+        list-style-type: none;
+        a{       
+            &:hover{
+                color: $violet;
+            }
+        }
+        // -----------le transform milay
+        // a:after{
+        //     content: '';
+        //     position: absolute;
+        //     width: 100%;
+        //     transform: scaleX(0);
+        //     height: 4px;
+        //     bottom: -4px;
+        //     left: 0;
+        //     background-color: white;
+        //     transform-origin: bottom right;
+        //     transition: transform 0.3s ease-out;
+        // }
+        // a:hover:after{
+        //     transform: scaleX(1);
+        //     transform-origin: bottom left;
+        //
+    }
+    label #btn , label #cancel{
+        color: white;
+        font-size: 30px;
+        float: right;
+        line-height: 120px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    #check{
+        display: none;
+    }
+    @media(max-width:1920px){
+
+    }
+    @media(max-width:1200px){
+        // li{
+        //     margin-left: 20px;
+        // }
+        // .logo{
+        //     font-size: 40px;
+        // }
+    }
+    // @media(max-width:950px){
+        
+    // }
+    @media(max-width:950px){
+        label #btn{
+            display: block;
+            margin-top: -25px;
+        }
+        label #cancel{
+            margin-top: -25px;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: rgba(116, 116, 116, 0.692);
+            top: 120px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        }
+        nav ul li a{
+            font-size: 20px;
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        #check:checked ~ label #btn{
+            display: none;
+        }
+        #check:checked ~ label #cancel{
+            display: block;
+        }
+    }
+    @media(max-width:900px){
+        .logo{
+            font-size: 30px;
+            padding: 10px;
+            height: 40px;
+        }
+        label #btn , label #cancel{
+            line-height: 115px;
+        }
+    }
+    @media(max-width:480px){
+    }
+    @media(max-width:320px){
+        
+    }
+}
+
+
+
+// -----------------------------------------ACCEUIL-------------------------------------------------------------------------
+.Acceuil{
+    background: $bg1;
+    color: white;
+    text-align: center;
+    display: flex;
+    padding-top: 190px;
+    // padding-bottom: 4px;
+    margin-top: -170px;
+    .section1{
+        width: 700px;
+    }
+    img{
+        width: 500px;
+        height: 450px;
+    }
+    .nom{
+        font-size: 30px;
+        // text-align: center;
+        padding-left: 30px;
+        .nom1{
+            font-size: 70px;
+            font-weight: 850;
+        }
+    }
+    .boutton{
+        text-align: center;
+        .btn{
+            a{
+                color: $rose;
+            }
+            font-size: 22px;
+            padding: 12px 34px;
+            font-weight: bold;
+            display: inline-flex;
+            border-radius: 8px;
+            border: 3px solid $rose;
+            background: transparent;
+            margin-left: 50px;
+            color: $rose;
+            z-index: 1;
+            overflow: hidden;
+            position: relative;
+            @media(max-width:500px){
+                margin-left: 15px;
+                padding: 9px 24px;
+            }
+            @media(max-width:385px){
+                margin-left: 15px;
+                padding: 4px 17px;
+            }
+            &:hover{
+               // color: white;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $violet;
+                z-index: -1;
+                transition: .5s;
+            }
+             &:hover::before{
+                 width: 100%;
+            }
+            // &:nth-child(2){
+            //     background: transparent;
+            //     color: white;
+            // }
+            // &:nth-child(2):hover::before{
+            //     background: rgb(60, 206, 255);
+            // }
+            // &:nth-child(2)::before{
+            //     background: rgb(60, 206, 255);
+            // }
+        }
+    }
+    @media(max-width:985px){
+        img{
+            width: 400px;
+            height: 400px;
+        }
+    }
+    @media(max-width:870px){
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        .nom{
+            font-size: 10px;
+            // text-align: center;
+            padding-left: 10px;
+            .nom1{
+                font-size: 50px;
+                font-weight: 850;
+            }
+            .animation1{
+                font-size: 40px;
+            }
+        }
+        
+    }
+    @media(max-width: 775px){
+        img{
+            display: none;
+        }
+    }
+    @media(max-width: 560px){
+        .nom{
+            font-size: 10px;
+            // text-align: center;
+            padding-left: 10px;
+            .nom1{
+                font-size: 50px;
+                font-weight: 850;
+            }
+            .animation1{
+                font-size: 40px;
+            }
+        }
+    }
+    @media(max-width: 360px){
+        .nom{
+            .animation1{
+                font-size: 37px;
+            }
+        }
+    }
+    
+    .photo{
+        img{
+            border: 4px solid $violet;
+            border-radius: 50% 80% / 70% 10%;
+            margin-top: 30px;
+            transition: 2s;
+            &:hover{
+                box-shadow: $violet 3px 5px 10px;
+                border-radius: 70% 10% / 50% 80% 
+            }
+        }
+        // background: black;
+    }
+    .animation1{
+        font-size: 50px;
+        font-weight: 700;
+        color: transparent;
+        // -webkit-text-stroke: 2px rgb(138, 46, 138);
+        -webkit-text-stroke: 2px $violet;
+    }
+    .lien{
+        // position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        a{
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid white;
+            border-radius: 50%;
+            background: transparent;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            z-index: 1;
+            overflow: hidden;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $violet;
+                z-index: -1;
+                transition: .5s;
+            }
+            &:hover::before{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// ---------------------------------------A PROPOS-------------------------------------------------
+.A_propos{
+    background: $bg2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //--ito ny mahampilamina anle izy mampa ampovoany an'le sary
+    flex-direction: column;
+    gap: 2rem;
+    // padding: 30px;
+    padding-bottom: 6rem;
+    // padding-top: 80px;
+    padding-left: 12px;
+    padding-right: 12px;
+    // margin-top: -200px;
+    h1{
+        margin-top: 50px;
+        font-size: 50px;
+        text-align: center;
+        span{
+            color: $violet;
+        }
+        @media (max-width:600px) {
+            font-size: 40px;
+        }
+        @media (max-width:400px) {
+            font-size: 35px;
+        }
+    }
+    .image{
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+        img{ 
+            width: 70%;
+            height: 70%;
+            border: 5px solid $violet;
+            border-radius: 50%;
+        }
+        .circle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 4px solid $violet;
+        }
+    }
+    h3{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: -30px;
+        @media(max-width: 480px){
+            margin-top: -180px;
+        }
+        @media (max-width:400px) {
+            font-size: 35px;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+        @media(max-width: 480px){
+            // margin-top: -70px;
+        }
+    }
+    button{
+        font-size: 30px;
+        padding: 10px;
+        background: $rose;
+        color: white;
+        border: 1px solid $rose;
+        border-radius: 10px;
+        transition: .1s;
+        &:hover{
+            // box-shadow: $violet 3px 5px 15px 2px;
+            box-shadow: $violet 6px 6px 3px;
+            font-size: 32px;
+        }
+        @media(max-width: 480px){
+            font-size: 20px;
+            padding: 7px;
+        }
+        a{
+            color: white;
+        }
+    }
+}
+@media #{$small}{
+    .A_propos{
+        .image{
+            img{
+                width: 200px;
+                height: 200px;
+                margin-top: -130px;
+            }
+            .circle{
+                color: transparent;
+                border: transparent;
+            }
+        }
+    }
+}
+
+
+// ----------------------------------------------------COMPETENCES-----------------------------------------------------------------
+h1{
+    text-align: center;
+    @media (max-width:600px) {
+        font-size: 40px;
+    }
+    @media (max-width:400px) {
+        font-size: 35px;
+    }
+}
+// .competence{
+//     padding: 10px;
+//     display: flex;
+//     .div1{
+//         width: 50%;
+//         margin-left: 45px;
+//     }
+//     .diplome{
+//         border-left: 4px solid green;
+//         .content{
+//             position: relative;
+//             padding-left: 35px;
+            
+//         }
+        
+//     }
+//     .point{
+//         .ligne{
+//             padding: 1.5rem;
+//             border: 2px solid black;
+//             border-radius: 10px;
+//             margin-bottom: 10px;
+//             &::before{
+//                 content: '';
+//                 position: absolute;
+//                 top: 0;
+//                 width: 2rem;
+//                 height: 2rem;
+//                 background: green;
+//                 border-radius: 50%;
+//             }
+//         }
+//     }
+// }
+h1{
+    font-size: 50px;
+    padding-top: 100px;
+    text-align: center;
+    span{
+        color: $violet;
+    }
+}
+.competence{
+    display: flex;
+    font-size: 20px;
+    // background: $bg1;
+    padding-top: 200px;
+    margin-top: -160px;
+    .education{
+        margin-left: 30px;
+        border-left: 4px solid $rose;
+        padding-left: 30px;
+    }
+    .ligne{
+        border: 2px solid $rose;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 10px;
+        position: relative;
+        padding-left: 2rem;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -3.1rem;
+            width: 2rem;
+            height: 2rem;
+            background: $rose;
+            border-radius: 50%;
+        }
+    }
+    .couvert{
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $violet;
+            background-size: cover;
+            z-index: -1;
+            transition: .5s;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
+}
+@media(max-width:550px){
+    h1{
+        font-size: 40px;
+    }
+    .competence{
+        flex-wrap: wrap;
+        margin-left: -18px;
+    }
+}
+
+
+// -----------------------------------MES SKILLS---------------------------------------------------------------------
+.skills{
+    margin-top: 130px;
+    background: $bg2;
+    h1{
+        @media (max-width:600px) {
+            font-size: 40px;
+        }
+        @media (max-width:400px) {
+            font-size: 35px;
+        }
+    }
+    .col{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+    }
+    .rangé{
+        border: 2px solid $violet;
+        border-radius: 10px;
+        padding: 20px;
+        background: $rose;
+    }
+    .force{
+        width: 550px;
+        h3{
+            span{
+                margin-left: 500px;
+            }
+        }
+        .bar{
+            height: 1.5rem;
+            border-radius: .6rem;
+            border: .2rem solid $violet;
+            padding: .5rem;
+            margin: 1rem 0;  
+            span{
+                margin-right: 30px;
+                display: block;
+                height: 100%;
+                border-radius: .3rem;
+                background: $violet;
+            }
+        }
+    }
+}
+@media(max-width:1220px){
+    .skills{
+        .force{
+            width: 500px;
+            h3{
+                span{
+                    margin-left: 400px;
+                }
+            }
+        }
+        .rangé{
+            margin-top: 20px;
+        }
+       
+    }
+}
+@media(max-width:1145px){
+    .skills{
+        .force{
+            width: 400px;
+            h3{
+                span{
+                    margin-left: 350px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:950px){
+    .skills{
+        .force{
+            width: 300px;
+            h3{
+                span{
+                    margin-left: 240px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:725px){
+    .skills{
+        .force{
+            width: 200px;
+            h3{
+                span{
+                    margin-left: 140px;
+                }
+            }
+        }
+    }
+}
+@media(max-width:520px){
+    .skills{
+        .col{
+            flex-wrap: wrap;
+        }
+        .force{
+            width: 300px;
+        }
+    }
+}
+@media(max-width:380px){
+    .skills{
+        .force{
+            width: 250px;
+        }
+    }
+}
+// ----------------------------------CONTACT-----------------------------------------------
+.contact{
+    padding-top: 100px;
+    text-align: center;
+    margin-top: 60px;
+    background: $bg1;
+    padding-bottom: 100px;
+    p{
+        font-size: 50px;
+        font-weight: bold;
+        span{
+            color: $violet;
+        }
+        @media (max-width:600px) {
+            font-size: 40px;
+        }
+        @media (max-width:400px) {
+            font-size: 35px;
+        }
+    }
+    form{
+        font-size: 100px;
+        color: $violet;
+    }
+    input{
+        font-size: 20px;
+        padding: 20px;
+        border: 3px solid $violet;
+        border-radius: 10px;
+    }
+    .sms{
+        padding-right: 100px;
+        padding-bottom: 90px;
+    }
+    button{
+        font-size: 30px;
+        padding: 10px;
+        background: $rose;
+        color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        transition: .1s;
+        &:hover{
+            // box-shadow: $violet 3px 5px 15px 2px;
+            box-shadow: $violet 6px 6px 3px;
+            font-size: 32px;
+        }
+        a{
+            color: white;
+        }
+    }
+    @media(max-width:405px){
+        .sms{
+            padding-right: 40px;
+            padding-bottom: 80px;
+        }
+        form{
+            font-size: 80px;
+        }
+        input{
+            font-size: 16px;
+            padding: 10px;
+            border: 3px solid $violet;
+            border-radius: 10px;
+        }
+    }
+}
+
