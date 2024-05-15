@@ -50,7 +50,6 @@ nav ul {
 }
 nav a {
   position: relative;
-  color: white;
   font-size: 18px;
   font-weight: bold;
 }
@@ -121,6 +120,35 @@ nav #check {
     line-height: 115px;
   }
 }
+
+.navbar-color-acceuil {
+  background-color: red; /* Couleur lorsque vous êtes dans la section Accueil */
+}
+
+.navbar-color-propos {
+  background-color: blue; /* Couleur lorsque vous êtes dans la section A Propos */
+}
+
+.navbar-color-competence {
+  background-color: green; /* Couleur lorsque vous êtes dans la section Compétences */
+}
+
+.navbar-color-skills {
+  background-color: yellow; /* Couleur lorsque vous êtes dans la section Skills */
+}
+
+.navbar-color-contact {
+  background-color: orange; /* Couleur lorsque vous êtes dans la section Contact */
+}
+
+nav ul li a {
+  color: white; /* Couleur de texte par défaut */
+}
+
+nav ul li.active a {
+  color: rgb(101, 149, 252); /* Couleur de texte lorsque le lien est actif */
+}
+
 .Acceuil {
   background: black;
   color: white;
@@ -146,6 +174,7 @@ nav #check {
 }
 .Acceuil .boutton {
   text-align: center;
+  margin-top: 10px;
 }
 .Acceuil .boutton .btn {
   font-size: 22px;
@@ -155,7 +184,6 @@ nav #check {
   border-radius: 8px;
   border: 3px solid rgb(65, 65, 133);
   background: transparent;
-  margin-left: 50px;
   color: rgb(65, 65, 133);
   z-index: 1;
   overflow: hidden;
@@ -175,9 +203,6 @@ nav #check {
     margin-left: 15px;
     padding: 4px 17px;
   }
-}
-.Acceuil .boutton .btn:hover {
-  color: white;
 }
 .Acceuil .boutton .btn::before {
   content: "";
@@ -244,10 +269,25 @@ nav #check {
   border-radius: 50% 80%/70% 10%;
   margin-top: 30px;
   transition: 2s;
+  animation: hover 10s ease infinite;
 }
 .Acceuil .photo img:hover {
   box-shadow: rgb(101, 149, 252) 3px 5px 10px;
   border-radius: 70% 10%/50% 80%;
+}
+@keyframes hover {
+  0% {
+    border-radius: 50% 80%/70% 10%;
+    box-shadow: rgb(101, 149, 252) 3px 5px 10px;
+  }
+  50% {
+    box-shadow: rgb(101, 149, 252) 3px 5px 10px;
+    border-radius: 70% 10%/50% 80%;
+  }
+  100% {
+    border-radius: 50% 80%/70% 10%;
+    box-shadow: rgb(101, 149, 252) 3px 5px 10px;
+  }
 }
 .Acceuil .animation1 {
   font-size: 50px;
@@ -367,29 +407,6 @@ nav #check {
   text-align: center;
   font-size: 20px;
 }
-.A_propos button {
-  font-size: 30px;
-  padding: 10px;
-  background: rgb(65, 65, 133);
-  color: white;
-  border: 1px solid rgb(65, 65, 133);
-  border-radius: 10px;
-  transition: 0.1s;
-}
-.A_propos button:hover {
-  box-shadow: rgb(101, 149, 252) 6px 6px 3px;
-  font-size: 32px;
-}
-@media (max-width: 480px) {
-  .A_propos button {
-    font-size: 20px;
-    padding: 7px;
-  }
-}
-.A_propos button a {
-  color: white;
-}
-
 @media only screen and (max-width: 480px) {
   .A_propos .image img {
     width: 200px;
@@ -436,12 +453,38 @@ h1 span {
   padding-left: 30px;
 }
 .competence .ligne {
+  height: 150px;
   border: 2px solid rgb(65, 65, 133);
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
   position: relative;
   padding-left: 2rem;
+}
+@media (max-width: 1250px) {
+  .competence .ligne {
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .competence .ligne {
+    height: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .competence .ligne {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .competence .ligne {
+    height: 250px;
+  }
+}
+@media (max-width: 320px) {
+  .competence .ligne {
+    height: 300px;
+  }
 }
 .competence .ligne::before {
   content: "";
@@ -469,7 +512,7 @@ h1 span {
   width: 100%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1000px) {
   h1 {
     font-size: 40px;
   }
@@ -498,32 +541,153 @@ h1 span {
   margin-top: 40px;
 }
 .skills .rangé {
-  border: 2px solid rgb(101, 149, 252);
+  border: 3px solid rgb(101, 149, 252);
   border-radius: 10px;
   padding: 20px;
-  background: rgb(65, 65, 133);
+  background: black;
 }
 .skills .force {
   width: 550px;
 }
-.skills .force h3 span {
-  margin-left: 500px;
-}
-.skills .force .bar {
+.skills .force .bar1 {
   height: 1.5rem;
   border-radius: 0.6rem;
   border: 0.2rem solid rgb(101, 149, 252);
   padding: 0.5rem;
   margin: 1rem 0;
 }
-.skills .force .bar span {
-  margin-right: 30px;
+.skills .force .bar1 span {
+  margin-right: 15%;
   display: block;
   height: 100%;
   border-radius: 0.3rem;
   background: rgb(101, 149, 252);
+  animation: remplissage1 3s ease;
+}
+.skills .force .bar2 {
+  height: 1.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid rgb(101, 149, 252);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.skills .force .bar2 span {
+  margin-right: 50%;
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: rgb(101, 149, 252);
+  animation: remplissage2 3s ease;
+}
+.skills .force .bar3 {
+  height: 1.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid rgb(101, 149, 252);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.skills .force .bar3 span {
+  margin-right: 30%;
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: rgb(101, 149, 252);
+  animation: remplissage3 3s ease;
+}
+.skills .force .bar4 {
+  height: 1.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid rgb(101, 149, 252);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.skills .force .bar4 span {
+  margin-right: 80%;
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: rgb(101, 149, 252);
+  animation: remplissage4 3s ease;
+}
+.skills .force .bar5 {
+  height: 1.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid rgb(101, 149, 252);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.skills .force .bar5 span {
+  margin-right: 60%;
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: rgb(101, 149, 252);
+  animation: remplissage5 3s ease;
+}
+.skills .force .bar6 {
+  height: 1.5rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid rgb(101, 149, 252);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.skills .force .bar6 span {
+  margin-right: 75%;
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: rgb(101, 149, 252);
+  animation: remplissage6 3s ease;
 }
 
+@keyframes remplissage1 {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 15%;
+  }
+}
+@keyframes remplissage2 {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 50%;
+  }
+}
+@keyframes remplissage3 {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 30%;
+  }
+}
+@keyframes remplissage4 {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 80%;
+  }
+}
+@keyframes remplissage5 {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 60%;
+  }
+}
+@keyframes remplissage6 {
+  0% {
+    margin-right: 100%;
+  }
+  100% {
+    margin-right: 75%;
+  }
+}
 @media (max-width: 1220px) {
   .skills .force {
     width: 500px;
@@ -606,25 +770,21 @@ h1 span {
   border: 3px solid rgb(101, 149, 252);
   border-radius: 10px;
 }
+.contact .droit {
+  margin-top: -30px;
+}
+.contact .mess {
+  margin-top: -30px;
+}
 .contact .sms {
   padding-right: 100px;
   padding-bottom: 90px;
 }
-.contact button {
-  font-size: 30px;
-  padding: 10px;
-  background: rgb(65, 65, 133);
-  color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  transition: 0.1s;
-}
-.contact button:hover {
-  box-shadow: rgb(101, 149, 252) 6px 6px 3px;
-  font-size: 32px;
-}
-.contact button a {
-  color: white;
+@media (max-width: 830px) {
+  .contact input {
+    padding: 16px;
+    width: 200px;
+  }
 }
 @media (max-width: 405px) {
   .contact .sms {
@@ -640,6 +800,69 @@ h1 span {
     border: 3px solid rgb(101, 149, 252);
     border-radius: 10px;
   }
+}
+
+.boutton {
+  text-align: center;
+}
+.boutton .btn {
+  font-size: 22px;
+  padding: 12px 34px;
+  font-weight: bold;
+  display: inline-flex;
+  border-radius: 8px;
+  border: 3px solid rgb(65, 65, 133);
+  background: transparent;
+  color: rgb(65, 65, 133);
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.boutton .btn a {
+  color: rgb(65, 65, 133);
+}
+@media (max-width: 500px) {
+  .boutton .btn {
+    margin-left: 15px;
+    padding: 9px 24px;
+  }
+}
+@media (max-width: 385px) {
+  .boutton .btn {
+    margin-left: 15px;
+    padding: 4px 17px;
+  }
+}
+.boutton .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(101, 149, 252);
+  z-index: -1;
+  transition: 0.5s;
+}
+.boutton .btn:hover::before {
+  width: 100%;
+}
+
+/*--------------------animation js---------------------*/
+[class*=invisible-] {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /*transition: 1.5s;*/
+  transition: 2s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.invisible-2 {
+  transition: 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
-    <title>Porfolio</title>
+    <title>Porfolio KevinFal</title>
 </head>
 <body>
     <!-- ilay bar de navigation eny ambony le milay ee!!! -->
-    <nav>
+    <nav id="navbar">
         <div class="logo">KEVIN.FAL</div>
         <input type="checkbox" id="check">
         <label for="check">
@@ -18,7 +18,7 @@
             <i class="fas fa-times" id="cancel"></i>
         </label>
         <ul>
-            <li><a href="#acceuil" class="active">Acceuil</a></li>
+            <li><a href="#acceuil">Acceuil</a></li>
             <li><a href="#propos">A Propos</a></li>
             <li><a href="#competence">Compétences</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -26,36 +26,40 @@
         </ul>
     </nav>
 
+
+
     <!-- Section le resaka Acceuil -->
     <section class="Acceuil" id="acceuil">
         <div class="section1">
             <div class="nom">
                 <p class="nom1">Bonjour! je suis <span class="rose">FALISOA Kevin</span></p>
-                <p class="animation1">DEVELOPPEUR  <br> WEB</p>
+                <p class="animation1 invisible-1">DEVELOPPEUR  <br> WEB</p>
             </div>
             <div class="boutton">
-                <button class="btn"><a href="pdf/FALISOA Kevin (3).pdf">Voir CV</a></button>
-                <button class="btn"><a href="">Parlons</a></button>
+                <button class="btn"><a href="pdf/FALISOA Kevin (6).pdf">Voir CV</a></button>
+               <!-- <button class="btn"><a href="">Parlons</a></button>-->
             </div>
             <div class="lien">
+                <a href="mailto:kevinfal383@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
         <div class="photo">
-            <img src="image/IMG_20240307_122151.jpg" alt="">
+            <img src="image/portfolio/portfolio 16.jpg" alt="">
         </div>
     </section>
 
 
+
+
     <!-- section à propos -->
-    <div class="A_propos" id="propos">
-        <h1>A propos <span>de moi</span></h1>
+    <section class="A_propos" id="propos">
+        <h1 class="invisible-2">A propos <span>de moi</span></h1>
 
         <div class="image">
-            <img src="image/IMG_20240307_122151.jpg" alt="">
+            <img src="image/portfolio/portfolio 16.jpg" alt="">
             <span class="circle"></span>
         </div>
 
@@ -66,38 +70,41 @@
                 et l’envie d’apprendre en permanence et de contribuer
                 positivement à chaque projet auquel je participe.</p>
         </div>
+        <div class="boutton">
+            <button class="btn" type="button"><a href="En savoir plus/CV.pdf">En savoir plus</a></button>
+        </div>
+    </section>
 
-        <button class="btn" type="button"><a href="En savoir plus/CV.pdf">En savoir plus</a></button>
-    </div>
+
 
 
     <!-- section compétences -->
-    <div id="competence">
-        <h1>Mes <span> compétences</span></h1>
-        <section class="competence">
+    <section id="competence">
+        <h1 class="invisible-2">Mes <span> compétences</span></h1>
+        <div class="competence">
     
             <div class="education">
                 <div>
-                    <h2>Education</h2>
+                    <h2>Educations</h2>
                 </div>
                 <div class="ligne">
                     <div class="couvert">
-                        <h3>Master</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quis sequi quaerat atque quasi, placeat fuga similique blanditiis accusantium. Adipisci veniam officia eaque alias inventore expedita, ad esse neque?</p>
+                        <h3>Licence en cour: 2023 - ce jour</h3>
+                        <p>Actuellement, je suis en première année à l'Institut National Supérieur d'Informatique (INSI) Ambanidia, où je suis immergé dans un environnement d'apprentissage très enrichissant. Je suis motivé à explorer davantage ce domaine passionnant.</p>
                     </div>
                 </div>
     
                 <div class="ligne">
                     <div class="couvert">
-                        <h3>Master</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quis sequi quaerat atque quasi, placeat fuga similique blanditiis accusantium. Adipisci veniam officia eaque alias inventore expedita, ad esse neque?</p>
+                        <h3>Delf B2 en cour: 2023 - ce jour</h3>
+                        <p>Actuellement, je perfectionne mon français à l'Alliance Française, où je m'immerge dans la langue et la culture francophones. C'est une expérience enrichissante qui me permet d'améliorer mes compétences linguistiques et de mieux comprendre la diversité culturelle.</p>
                     </div>
                 </div>
     
                 <div class="ligne">
                     <div class="couvert">
-                        <h3>Master</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quis sequi quaerat atque quasi, placeat fuga similique blanditiis accusantium. Adipisci veniam officia eaque alias inventore expedita, ad esse neque?</p>
+                        <h3>Bacc série scientifique: 2023</h3>
+                        <p>L'année dernière, j'ai brillamment obtenu mon baccalauréat en série scientifique. C'était une grande réussite pour moi et cela m'a permis de consolider mes bases académiques dans les domaines scientifiques.</p>
                     </div>
                 </div>
             </div>
@@ -109,85 +116,74 @@
                 </div>
                 <div class="ligne">
                     <div class="couvert">
-                        <h3>Master</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quis sequi quaerat atque quasi, placeat fuga similique blanditiis accusantium. Adipisci veniam officia eaque alias inventore expedita, ad esse neque?</p>
+                        <h3>Membre de DSA et DEVMOB</h3>
+                        <p>Je suis actuellement membre du club DSA, dédié aux algorithmes, ainsi que du club DEVMOB, axé sur le développement web, à l'INSI Ambanidia. Ces clubs offrent des opportunités d'apprentissage, de collaboration et d'exploration dans les domaines de l'informatique.</p>
                     </div>
                 </div>
     
                 <div class="ligne">
                     <div class="couvert">
-                        <h3>Master</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quis sequi quaerat atque quasi, placeat fuga similique blanditiis accusantium. Adipisci veniam officia eaque alias inventore expedita, ad esse neque?</p>
+                        <h3>Hackaton INSI 2023</h3>
+                        <p>J'ai également participé à l'Hackathon, où j'ai eu l'opportunité de mettre en pratique mes compétences en programmation et de collaborer avec d'autres passionnés de technologie pour résoudre des défis stimulants.</p>
                     </div>
                 </div>
     
                 <div class="ligne">
                     <div class="couvert">
-                        <h3>Master</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere laudantium quis sequi quaerat atque quasi, placeat fuga similique blanditiis accusantium. Adipisci veniam officia eaque alias inventore expedita, ad esse neque?</p>
+                        <h3>Rallye mathematique 2020 et 2019</h3>
+                        <p>J'ai aussi eu l'occasion de participer deux fois au Rallye Mathématique, où j'ai pu relever des défis stimulants et mettre en pratique mes compétences en résolution de problèmes mathématiques. Celà m'a permis de développer ma logique et ma créativité.</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- section les skill (mes forces eeee) -->
+
+
+    <!-- section outils informatiques -->
     <section class="skills" id="skills">
-        <h1 class="petit">Mes <span>Skills</span></h1>
+        <h1 class="petit invisible-2">Outils<span> informatiques</span></h1>
 
         <div class="col">
             <div class="rangé">
-                <div>
-                    <h2 class="titre">Coding Skills</h2>
-                </div>
-        
                 <div class="force">
                     <div class="row">
-                        <h3>HTML <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>Html </h3>
+                        <div class="bar1"><span></span></div>
                     </div>
         
                      <div class="row">
-                        <h3>CSS <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>Css </h3>
+                        <div class="bar1"><span></span></div>
                     </div>   
         
                     <div class="row">
-                        <h3>PYTHON <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>Javascript </h3>
+                        <div class="bar2"><span></span></div>
                     </div>
                         
                     <div class="row">
-                        <h3>PHP <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>Sass / W3css / Bootstrap</h3>
+                        <div class="bar3"><span></span></div>
                     </div>
                 </div>
             </div>
     
-            <div class="rangé">
-                <div>
-                    <h2 class="titre">Coding Skills</h2>
-                </div>
-            
+            <div class="rangé">            
                 <div class="force">
                     <div class="row">
-                        <h3>HTML <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>PHP</h3>
+                        <div class="bar4"><span></span></div>
                     </div>
             
                     <div class="row">
-                        <h3>HTML <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>langage C </h3>
+                        <div class="bar5"><span></span></div>
                     </div>   
             
                     <div class="row">
-                        <h3>HTML <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
-                    </div>
-                            
-                    <div class="row">
-                        <h3>HTML <span>90%</span></h3>
-                        <div class="bar"><span></span></div>
+                        <h3>Python (pour debutant)</h3>
+                        <div class="bar6"><span></span></div>
                     </div>
                 </div>
             </div>
@@ -195,9 +191,11 @@
     </section>
 
     
+
+
     <!------------------- sectioon contact ------------------>
     <section class="contact" id="contact">
-        <p>Contactez <span> moi!</span></p>
+        <p class="invisible-2">Contactez <span> moi!</span></p>
 
         <form action="form.php" method="POST">
             <div class="droit">
@@ -210,18 +208,20 @@
                 <input type="text" placeholder="Objet" name="objet" id="objet">
             </div>
 
-            <div>
+            <div class="mess">
                 <input class="sms" type="text" placeholder="Votre message" name="message" id="message">
             </div>
 
-            <div>
+            <div class="boutton">
                 <button class="btn" name="valider">Envoyé</button>
             </div>
             
         </form>
     </section>
 
-    <!-- <script src="app.js"></script>
-    <script src="jquery-3.6.0.js"></script> -->
+    
+
+    <script src="app.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>
