@@ -83,25 +83,26 @@ nav #check {
     margin-top: -25px;
   }
   nav ul {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    background: rgba(116, 116, 116, 0.692);
-    top: 120px;
+    height: 400px;
+    background: rgba(99, 99, 99, 0.692);
+    top: 89px;
     left: -100%;
+    justify-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     transition: all 0.5s;
   }
-  nav nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav nav ul li a {
-    font-size: 20px;
-  }
-  nav #check:checked ~ ul {
+  nav .menu.mobile-menu {
     left: 0;
+  }
+  nav ul li {
+    line-height: 60px;
+  }
+  nav ul li a {
+    font-size: 18px;
   }
   nav #check:checked ~ label #btn {
     display: none;
