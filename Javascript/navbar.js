@@ -1,3 +1,4 @@
+//--------------------------animation qui change le bg de la barre de navigation-----------------
 /*window.addEventListener('scroll', function() {
     var navbar = document.getElementById('navbar');
     var acceuil = document.getElementById('acceuil').offsetTop;

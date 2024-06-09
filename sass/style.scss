@@ -313,7 +313,7 @@ nav ul li.active a {
             display: none;
         }
     }
-    @media(max-width: 560px){
+    @media(max-width: 600px){
         .nom{
             font-size: 10px;
             // text-align: center;
@@ -327,7 +327,7 @@ nav ul li.active a {
             }
         }
     }
-    @media(max-width: 360px){
+    @media(max-width: 400px){
         .nom{
             .animation1{
                 font-size: 37px;
@@ -709,6 +709,21 @@ h1{
                 animation: remplissage6 3s ease;
             }
         }
+        .bar7{
+            height: 1.5rem;
+            border-radius: .6rem;
+            border: .2rem solid $violet;
+            padding: .5rem;
+            margin: 1rem 0;  
+            span{
+                margin-right: 55%;
+                display: block;
+                height: 100%;
+                border-radius: .3rem;
+                background: $violet;
+                animation: remplissage7 3s ease;
+            }
+        }
     }
 }
 @keyframes remplissage1{
@@ -757,6 +772,14 @@ h1{
     }
     100%{
         margin-right: 75%;
+    }
+}
+@keyframes remplissage7{
+    0%{
+        margin-right: 100%;
+    }
+    100%{
+        margin-right: 55%;
     }
 }
 @media(max-width:1220px){
